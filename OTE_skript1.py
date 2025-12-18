@@ -3,7 +3,7 @@ import pandas as pd
 #Načtení DT ČR
 
 # Relativní cesta k souboru (podsložka Data)
-excel_path = r"Data/Rocni_zprava_2025_V0_trhy_ERD.xlsx"
+excel_path = r"Rocni_zprava_2025_V0_trhy_ERD.xlsx"
 sheet_name = "DT ČR"
 
 # Načtení celého listu bez hlaviček
@@ -208,4 +208,5 @@ df_odchylky.columns = df_odchylky.iloc[0]
 df_odchylky = df_odchylky[1:].reset_index(drop=True)
 
 print(df_odchylky.head())
+
 df_odchylky = df_odchylky.dropna(subset=[df_odchylky.columns[3]])
